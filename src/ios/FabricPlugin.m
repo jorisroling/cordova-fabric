@@ -41,8 +41,10 @@
 {
     NSLog(@"Fabric Plugin Initialize");
 
+	[[Fabric sharedSDK] setDebug: YES];
+    // [Fabric with:@[[CrashlyticsKit]]];
     [Fabric with:@[[Crashlytics class]]];
-    
+	    
     [super pluginInitialize];
 }
 
